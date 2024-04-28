@@ -1,0 +1,18 @@
+
+Integer Data Types
+    Byte                    : 08bits wide, unsigned 0->2^08 or signed -2^07 -> 2^07 - 1 
+    Word                    : 16bits wide, unsigned 0->2^16 or signed -2^15 -> 2^15 - 1
+    Dword (double word)     : 32bits wide, unsigned 0->2^32 or signed -2^31 -> 2^31 - 1  
+    Qwort (double quar word): 64bits wide, unsigned 0->2^64 or signed -2^63 -> 2^63 - 1  
+
+Floating Point Data Types
+    real04: IEEE74 single   precision float. 32bits wide. 1 sign bit, 08 exponent bit, 23 mantissa bit.
+    real08: IEEE74 double   precision float. 64bits wide. 1 sign bit, 11 exponent bit, 52 mantissa bit.
+    real10: IEEE74 extended precision float. 80bits wide. 1 sign bit, 15 exponent bit, 64 mantissa bit.
+    note: real10 only works on x87 FPU (Subset of x86).
+
+SIMD Data Types
+    Xmmword: 128bits, 16bytes, 08words, 04dwords or 2qwords.
+    Ymmword: 256bits, 32bytes, 16words, 08dwords or 4qwords.
+    Zmmword: 512bits, 64bytes, 32words, 16dwords or 8qwords.
+    note: used in SIMD packed data.

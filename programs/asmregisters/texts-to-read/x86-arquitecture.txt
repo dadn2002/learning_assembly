@@ -1,0 +1,18 @@
+
+x86-arquitecture
+
+General Purpose
+    32    |    EAX    |    EBA    |    ECX    |    EDX    |
+    16    |     | AX  |     | BX  |     | CX  |     | DX  |
+    08    |     |AH|AL|     |BH|BL|     |CH|CL|     |DH|DL|  xH acess the first 2 values of xX, it is, xy__.
+
+Index Registers
+    32    |    ESI    |    EDI    |    EBP    |    ESP    |
+    16    |     | SI  |     | DI  |     | BP  |     | SP  |
+
+Ip and Flags
+    32    |    EIP    |   eFlags  |
+    16    |     | IP  |     |Flags|
+
+Segment Registers
+    16    |     | CS  |     | DS  |     | ES  |     | SS  |     | FS  |     | GS  |

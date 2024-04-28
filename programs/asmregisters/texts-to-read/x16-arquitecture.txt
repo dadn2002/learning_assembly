@@ -1,0 +1,15 @@
+
+x16-arquitecture
+
+General Purpose
+    16    | AX  | BX  | CX  | DX  |
+    08    |AH|AL|BH|BL|CH|CL|DH|DL|  xH acess the first 2 values of xX, it is, xy__.
+
+Index Registers
+    16    | SI  | DI  | BP  | SP  |
+
+Ip and Flags
+    16    | IP  |Flags|
+
+Segment Registers
+    16    | CS  | DS  | ES  | SS  |
