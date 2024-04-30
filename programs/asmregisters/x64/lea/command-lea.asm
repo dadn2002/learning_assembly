@@ -6,7 +6,6 @@ tempFlot real4 5.3
 
 .code
 main proc     
-    
     xor rax, rax    ;  zeros the value
     lea rax, tempByte  ;  in this line i pass to rax register the adress of tempByte variable
                        ;  note that all pointers are 64bits wide.

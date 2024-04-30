@@ -6,7 +6,6 @@ tempFlot real4 12.1
 
 .code
 main proc     
-    
     xor al, al    ;  zeros the value
     mov al, byte ptr [tempByte]  ;  in this line i pass to ax register the value type byte of the pointer
                                  ;  that refers to tempByte with the command "mov"
