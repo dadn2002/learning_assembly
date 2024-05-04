@@ -4,13 +4,13 @@ tempByte db    1    ;  creating a variable named temp of type db(byte) with valu
 tempByte2 db   2
 tempFlot real4 2.5
 
-.code
+.code                  ;  its behavior is similar to add
 main proc     
     xor rax, rax       ;  zeros the value
     xor rbx, rbx       ;  zeros the value
     mov rax, 2          
     mov rbx, 1
-    sub rax, rbx       ;  add the source to the destination and stores in destination
+    sub rax, rbx       ;  sub the source to the destination and stores in destination
                        ;  that is, "sub rax, rbx" ~ "rax = rax - rbx"
 
     xor rax, rax       ;  zeros the value
@@ -40,16 +40,18 @@ main proc
     ;  Something interesting happens when you add operands with different sizes
 
     xor rax, rax
-    add rax, 2147483648
-    ;  rax FFFFFFFF00000000
-    ;  ADD sign extends an immediate operand when the operands are not the same size.  
+    mov rax, 0
+    sub rax, 1
+    ;  rax FFFFFFFFFFFFFFFF
+    ;  sub sign extends an immediate operand when the operands are not the same size.  
     ;  When destination is 64bits, the immediate will always read 32bits and itll be
-    ;  sign extended. So if the 31bit is 1, the value turns negative!  
+    ;  sign extended. So if the 31bit is 1, the value turns negative! With a bonus
+    ;  underflows can happens too  
 
     xor rax, rax
     xor rbx, rbx
     mov rbx, 2147483648
-    add rax, rbx
+    sub rax, rbx
     ;  rax 0000000080000000
 
 
